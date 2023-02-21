@@ -1,0 +1,53 @@
+Lemonade Stand
+--------------
+
+* The lemonde stand game is a kids game to teach basic math and business.
+* The object of the game is to sell as much lemonade in 7 days and become the leader in the leaderboard
+* The first iteration of the game is quite simple, but it can certainly be extended as we get more into it.
+* Our task is to create the game engine, the UI can be added later
+
+Game Rules:
+* You will start the game with $10. 
+* Each day you will be presented with a weather forecast for the day which will either be
+	* Overcast
+	* Clear
+	* Sunny
+
+* At the start of the day you need to decide how many jugs of lemonade to make and how much to sell each cup of lemondade for. 
+	* A jug of lemonade contains 14 cups
+	* A jug costs $3.50 dollars to make
+
+* You can only make full jugs (i.e. 1.5 jugs is invalid)
+
+* The weather forecast and price of a cup will determine how many cups you will sell
+
+* The price of a cup can be between 0 and $2 in $0.05 increments
+* Any profits earned in a day can be used to buy more lemonade the next day
+* Any lemonade not sold will be wasted and will cost 15c per cup to dispose of
+* The game automatically ends if your funds reach zero or below
+
+* The calculation for number of customers is:
+	* (Base # customers * Weather Multiplier) - (Base # customers * Weather Multiplier) * price multiplier
+		* The base # of customers is a seed value that all other calculations are driven from
+	* Overcast: multiplied by a number between 1.3 and 1.6
+	* Clear: multiplied by a number between 1.7 and 2.1
+	* Sunnny: multiplied by a number between 2.2 and
+	* Price multipler: 
+		$0.25 is the break-even point (multiplier 0)
+		Any price over $0.25 the multiplier goes up by -0.025
+			Examples: 
+				* a $0.30 cup will have a multiplier of -0.025
+				* a $0.35 cup will have a multiplier of -0.050
+				* a $2 cup will have a multiplier of -0.875
+
+
+
+	Example:
+	Base #: 25
+	Weather: Overcast (1.7)
+	Price per cup: 0.50c (-0.125)
+	Max # of customers = ((25 * 1.7) - (25 * 1.7) * -0.125
+	* 38 customers * 
+
+
+
