@@ -8,6 +8,7 @@ Lemonade Stand
 
 Game Rules:
 * You will start the game with $10. 
+* The game will run over 7 dsys
 * Each day you will be presented with a weather forecast for the day which will either be
 	* Overcast
 	* Clear
