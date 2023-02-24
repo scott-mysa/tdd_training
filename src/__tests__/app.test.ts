@@ -1,6 +1,6 @@
-import App from '../app'
+import Game from '../game'
 describe('app tests', () => {
     it('is defined', () => {
-        expect(App).toBeDefined();
+        expect(Game).toBeDefined();
     })
 })
