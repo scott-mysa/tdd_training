@@ -1,5 +1,5 @@
 export function getForecast() {
     const forecast = ['Overcast', 'Clear', 'Cloudy'];
-
-    return 'Overcast';
+    const random = Math.floor(Math.random() * forecast.length);
+    return forecast[random];
 }
