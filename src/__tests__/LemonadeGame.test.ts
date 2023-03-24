@@ -15,27 +15,20 @@ describe('tests for game', () =>  {
         expect(gameEngine.getBalance()).toBe(initBalance)
     })
 
-
-    it('The weather should be unsny, cloudy or overcast', () => {
-        // assuming weather has an engine/function that returns string
-        // Check if the string is valid
-
-        // const weatherSeed = 100 // optional -> 100 for sunny, 101 for cloudy, 102 for overcast
-        const weatherForecast = new WeatherForecast()
-        expect(weatherForecast.getWeather()).toBe('sunny')
-
-
+    it("When the game starts it should be day one", () => {
+        const gameEngine = new LemonadeGame(10)
+        const result = gameEngine.simulateDay()
+        expect(result.day).toBe(1)
     })
+    
+    it("After calling simulateDay twice it should be day 2", () => {
+        const gameEngine = new LemonadeGame(10)
+        gameEngine.simulateDay()
+        const result = gameEngine.simulateDay()
+        expect(result.day).toBe(2)
+    })    
+    it.todo("Check if the game ends on the 8th day")
+    
 
-    // it('The weather should be unsny, cloudy or overcast', () => {
-    //     // assuming weather has an engine/function that returns string
-    //     // Check if the string is valid
-        
-    //     // seed is optional
-    //     const validWeather = ['sunny', 'cloudy', 'overcast']
-    //     const weatherForecast = new WeatherForecast()
-    //     expect(weatherForecast.getWeather()).toContain(validWeather)
-
-    // })
 
 })
