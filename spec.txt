@@ -44,7 +44,7 @@ Game Rules:
 
 	Example:
 	Base #: 25
-	Weather: Overcast (1.7)
+	Weather: Clear (1.7)
 	Price per cup: 0.50c (-0.125)
 	Max # of customers = ((25 * 1.7) - (25 * 1.7) * -0.125
 	* 38 customers * 
