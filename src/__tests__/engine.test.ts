@@ -40,4 +40,39 @@ describe("game engine tests", () => {
       expect(engine.calculatePriceMultiplier(cupPrice)).toEqual(priceMultiplier);
     }
   );
+
+  it("simulate each day", () => {
+    const engine = new Engine();
+    const result = engine.simulateDay();
+    expect(result.day).toBe(1);
+  })
+
+  it("simulate day 3", () => {
+
+    // arrange
+    const engine = new Engine;
+
+    // act
+    let result = engine.simulateDay();
+    engine.simulateDay();
+    result = engine.simulateDay();
+
+    // assert
+    expect(result.day).toBe(3);
+  })
+
+  it("check result status for end of 7 days", () => {
+
+    const engine = new Engine;
+
+    let result = engine.simulateDay();
+    engine.simulateDay();
+    engine.simulateDay();
+    engine.simulateDay();
+    engine.simulateDay();
+    engine.simulateDay();
+    result = engine.simulateDay();
+
+    expect(result.gameStatus).toBe("end game");
+  })  
 });
